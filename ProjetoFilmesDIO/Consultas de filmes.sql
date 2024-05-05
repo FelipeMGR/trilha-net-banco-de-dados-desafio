@@ -35,7 +35,9 @@ SELECT Nome, Genero FROM Filmes
 INNER JOIN Generos ON Filmes.Id = Generos.Id
 WHERE Generos.Genero = 'Mistério'
 
-
+SELECT Nome,PrimeiroNome, UltimoNome, Papel FROM Filmes
+INNER JOIN ElencoFilme ON Filmes.Id = ElencoFilme.IdFilme
+INNER JOIN Atores ON ElencoFilme.IdAtor = Atores.Id
 --SELECT * FROM Filmes
 --SELECT * FROM Generos
 --SELECT * FROM FilmesGenero
